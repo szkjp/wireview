@@ -5,7 +5,7 @@ wireview.js
 
 ##How to use
 ###1. wireview.jsをダウンロードする
-<a href="">Download on github</a>
+<a href="https://github.com/szkjp/wireview/archive/master.zip">Download on github</a>
 
 ###2. headタグを記述
 jsとcssのディレクトリは保存した場所に合わせて、適宜変更してください。
