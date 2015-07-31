@@ -1,0 +1,62 @@
+// ============================
+// 共通パーツ読み込み
+// ============================
+@import "_core";
+
+
+// ============================
+// _base.scss
+// ============================
+#wrapper {
+	padding: 0 0 20px 0;
+}
+
+
+// ============================
+// _layout.scss
+// ============================
+$header-bg: #43698C;
+.l-header {
+	background-color: $header-bg;
+	.l-header__nav {
+		ul {
+			li {
+				a {
+					&.is-active,
+					&:hover {
+						background-color: #172E44;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// ============================
+// _module.scss
+// ============================
+.c-content {
+	margin: 0;
+	background-color: transparent;
+	border: 0px solid #0000cc;
+	@include border-radius(4px);
+}
+.c-contentSub {
+	margin: 0 0 60px 0;
+	&:last-child {
+		margin: 0 0 30px 0;
+	}
+}
+
+.c-title {
+	font-size: $fs-xxxlarge;
+}
+
+.c-titleSub {
+}
+
+.p-mainTitle {
+	margin: 30px 0;
+	font-size: 34px;
+}

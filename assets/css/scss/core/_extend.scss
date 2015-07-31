@@ -1,0 +1,28 @@
+// ============================
+// 共通パーツ読み込み
+// ============================
+@import "_variable";
+
+
+// ====================================
+// extend
+// ※先頭にextendをつけること
+// ====================================
+// クリアフィックス用
+%extend-cf {
+	*zoom: 1;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+	}
+}
+
+%extend-hover {
+	@include transition(all, 0.2s);
+	opacity: 1;
+	&:hover {
+		opacity: 0.8;
+	}
+}

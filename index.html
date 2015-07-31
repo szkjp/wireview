@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>wireview.js - ワイヤーフレーム風の線画アニメーションjQueryプラグイン</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/jquery.wireview.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+	<script src="assets/js/plugins/jquery.transit.min.js"></script>
+	<script src="assets/js/jquery.wireview.js"></script>
+	<script>
+		$(function() {
+			var wire = $('section, .l-header, l-header__title, ul, h1, h2, h3').wireview({
+				rectFillColor: '#8FADE4',		// 塗りつぶしの色
+			});
+			$('.js-reanime').on('click', function() {
+				wire.startAnimation();
+			});
+		});
+	</script>
+</head>
+<body>
+
+<header class="l-header">
+	<div class="l-header__inner">
+		<h1 class="l-header__title"><a href="index.html">wireview.js</a></h1>
+		<ul class="l-header__sns">
+			<li><a href="https://twitter.com/naoyago" target="_blank"><img src="assets/images/icon_twitter@2x.png" width="28" height="28"></a></li>
+		</ul>
+		<nav class="l-header__nav">
+			<ul>
+				<li><a href="index.html" class="is-active">HOME</a></li>
+				<li><a href="#">Download</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="options.html">Options</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<div id="wrapper">
+
+
+	<!-- start#main -->
+	<div id="main">
+		<!-- start.content -->
+		<section class="c-content">
+			<h1 class="c-title">About</h1>
+			<p>ワイヤーフレーム風の線画のアニメーションを追加できるプラグインです。<br>
+			再生するたびに線の長さや塗りつぶし箇所がランダムに表示されます(オプションで細かい設定が可能)。</p>
+			<ul>
+				<li>htmlの要素に合わせてアニメーション</li>
+				<li>どの要素をアニメーションさせるか設定可能</li>
+				<li>自動再生のオン/オフが可能</li>
+				<li>その他、多彩(すぎる)オプション設定</li>
+				<li>コールバックによるイベント制御</li>
+				<li>Chrome, Firefox, Safari, IE11以上推奨</li>
+			</ul>
+			<p class="c-link js-reanime">もう一度再生</p>
+			<p>※このプラグインを実行するには「<a href="https://jquery.com/" target="_blank">jQuery</a>」「<a href="http://ricostacruz.com/jquery.transit/" target="_blank">Transit.js</a>」「<a href="http://www.createjs.com/" target="_blank">CreateJS</a>」が必要です。</p>
+		</section>
+		<!-- end.content -->
+
+
+		<!-- start.content -->
+		<section class="c-content">
+			<h1 class="c-title">How To Use</h1>
+
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">1. wireview.jsをダウンロードする</h2>
+				<p><a href="#">Download on github</a></p>
+			</section>
+
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">2. headタグを記述</h2>
+				<p>jsとcssのディレクトリは保存した場所に合わせて、適宜変更してください。</p>
+<pre><code class="html">&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.createjs.com/createjs-2015.05.21.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/jquery.transit.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/jquery.wireview.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;asset/css/jquery.wireview.css&quot; /&gt;</code></pre>
+			</section>
+
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">3. jsを記述</h2>
+<pre><code class="javascript">$(function() {
+	$('section, div').wireview();
+});</code></pre>
+			</section>
+		</section>
+		<!-- end.content -->
+
+
+		<!-- start.content -->
+		<section class="c-content">
+			<h1 class="c-title">Notice</h1>
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">CSS上の注意</h2>
+				<p>z-indexを多用しているサイトだと高確率で表示がおかしくなります。<br>
+			</section>
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">オプション回りの注意</h2>
+				<p>オプションのisScrollをtrueにするとアニメーション位置がずれることがあります。false推奨です。<br>
+				オプションのisHoverの動作は不安定です（主にz-index周り）。false推奨です。</p>
+			</section>
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">アニメーション前に一瞬画面が表示されてしまう場合</h2>
+				<p>対処法は色々ありますが、cssに下記記述を追加するのが手っ取り早いです。</p>
+<pre><code class="html">body {
+	visibility: hidden;
+}
+</code></pre>
+				<p class="mt10">※プラグインを使っていないページでも上記記述をしてしまうと、ページが真っ白のままになるのでご注意ください。</p>
+			</section>
+			<section class="c-contentSub">
+				<h2 class="c-titleSub">スマホ表示について</h2>
+				<p>スマホだとものすごく重いです。<br>
+				canvasのサイズをPC画面と同等の大きさで設定してしまっているため、負荷がかかってしまっているものと思われます。<br>
+				いつか修正します。</p>
+			</section>
+		</section>
+		<!-- end.content -->
+
+
+		<!-- start.content -->
+		<section class="c-content">
+			<h1 class="c-title">License</h1>
+			<p>MITライセンスに基づき、無償で利用できます。<br>
+			なお、本プラグインで発生した問題については対応できかねますので、自己責任でご利用ください。</p>
+		</section>
+		<!-- end.content -->
+
+
+		<!-- start.content -->
+		<section class="c-content">
+			<h1 class="c-title">Contact</h1>
+			<p>不明点、バグ等は<a href="https://twitter.com/naoyago" target="_blank">twitter</a>か<a href="http://begoingto.jp/contact/" target="_blank">問い合わせページ</a>宛に連絡いただけると助かります。</p>
+		</section>
+		<!-- end.content -->
+
+
+	</div>
+	<!-- end#main -->
+
+
+	<footer id="footer">
+		<p><small>Copyright © <a href="http://begoingto.jp/">begoingto</a> All Rights Reserved.</small></p>
+	</footer>
+</div>
+
+
+</body>
+</html>

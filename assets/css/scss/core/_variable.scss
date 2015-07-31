@@ -1,0 +1,66 @@
+// ====================================
+// 共通で使う変数を設定
+// ====================================
+// font-size
+$fs-xsmall: 12px;
+$fs-small: 13px;
+$fs-medium: 14px;
+$fs-large: 16px;
+$fs-xlarge: 24px;
+$fs-xxlarge: 28px;
+$fs-xxxlarge: 30px;
+
+// theme color
+$theme-color: #4F69B8;
+
+// font color
+$fc-base: #555;
+$fc-reverse: #fff;
+$fc-link: $theme-color;
+$fc-visited: $theme-color;
+$fc-hover: $theme-color;
+
+// color
+//$base-color: #5b7fe9;
+$base-color: $theme-color;
+$base-reverse-color: #fff;
+$border-color: #ccc;
+
+// etc
+$base-line-height: 1.8;
+
+// size
+$content-width: 960px;
+
+
+// ====================================
+// memo
+// ====================================
+///*-----------------------------------------------------
+//Yahoo UI Library Font-size Adjustment
+//Copyright (c) 2006, Yahoo! Inc. All rights reserved.
+//http://developer.yahoo.com/yui/license.txt
+//http://developer.yahoo.com/yui/fonts/
+//10px = 77%     11px = 85%     12px = 93%     13px = 100%
+//14px = 108%    15px = 116%    16px = 123.1%  17px = 131%
+//18px = 138.5%  19px = 146.5%  20px = 153.9%  21px = 161.6%
+//22px = 167%    23px = 174%    24px = 182%    25px = 189%
+//26px = 197%
+//------------------------------------------------------*/
+//$yui-10px: 77%;
+//$yui-11px: 85%;
+//$yui-12px: 93%;
+//$yui-13px: 100%;
+//$yui-14px: 108%;
+//$yui-15px: 116%;
+//$yui-16px: 123.1%;
+//$yui-17px: 131%;
+//$yui-18px: 138.5%;
+//$yui-19px: 146.5%;
+//$yui-20px: 153.9%;
+//$yui-21px: 161.6%;
+//$yui-22px: 167%;
+//$yui-23px: 174%;
+//$yui-24px: 182%;
+//$yui-25px: 189%;
+//$yui-26px: 197%;

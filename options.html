@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Options | wireview.js - ワイヤーフレーム風の線画アニメーションjQueryプラグイン</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script>
+</script>
+
+
+</head>
+<body>
+
+<header class="l-header">
+	<div class="l-header__inner">
+		<h1 class="l-header__title"><a href="index.html">wireview.js</a></h1>
+		<ul class="l-header__sns">
+			<li><a href="https://twitter.com/naoyago" target="_blank"><img src="assets/images/icon_twitter@2x.png" width="28" height="28"></a></li>
+		</ul>
+		<nav class="l-header__nav">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="#">Download</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="options.html" class="is-active">Options</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<div id="wrapper">
+
+
+	<!-- start#main -->
+	<div id="main">
+		<h1 class="p-mainTitle">Options</h1>
+
+		<!-- start.content -->
+		<section class="c-content js-content-01" id="to1">
+		<h1 class="c-title">各オプション値</h1>
+		<p>左がオプション名、右が初期値です。</p>
+
+<pre><code>// 基本設定
+autoStart: true,				// 自動再生するか否か
+isScroll: false,				// アニメーション中にスクロールを許可するか否か
+isHover: false,					// 要素マウスオーバーで実行するか否か
+// 上に乗せるレイヤーの設定
+isLayer: true,					// 上にレイヤーをのせるか否か
+layerHideSpeed: 1300,			// レイヤーが消える速度
+// 四角形の設定
+isRect: true,					// 四角形のアニメーションを行うかどうか
+isRectWhile: false,				// 表示したままか否か
+rectSpeed: 1500,				// アニメーション速度
+rectStartScale: 1,				// アニメーション開始時のスケールサイズ
+rectColor: &#039;transparent&#039;,		// 枠線の色
+rectStrokeSize: 1,				// 枠線の太さ
+rectFillColor: &#039;#f5f5f5&#039;,		// 塗りつぶしの色
+rectInitX: 0,					// 四角形の初期位置に調整する場合
+rectInitY: 0,					// 四角形の初期位置に調整する場合
+rectInitWidth: 0,				// 四角形の初期位置に調整する場合
+rectInitHeight: 0,				// 四角形の初期位置に調整する場合
+rectFillWidthMax: 950,			// 設定サイズ以上なら塗りつぶしをしない
+rectFillHeightMax: 950,			// 設定サイズ以上なら塗りつぶしをしない
+rectFillRandPer: 30,			// 塗りつぶしランダムの割合(20なら20%)
+//rectShowEase: &#039;circOut&#039;,		// 四角形表示時のイージング 未実装
+rectLastPosRandYMin: 30,		// 四角形が消える際のY座標のずれ最小値
+rectLastPosRandYMax: 60,		// 四角形が消える際のY座標のずれ最大値
+rectLastTimeMin: 500,			// 四角形が消えるときの最小時間
+rectLastTimeMax: 1500,			// 四角形が消えるときの最大時間
+// ボーダーの設定
+isLine: true,					// ボーダーのアニメーションを行うかどうか
+isLineWhile: false,				// 表示したままか否か
+lineSpeed: 1500,				// アニメーション速度
+lineColor: &#039;#999&#039;,				// 枠線の色
+lineStrokeSize: 1,				// 枠線の太さ
+//lineShowEase: &#039;circOut&#039;,		// 線の表示時のイージング 未実装
+lineInitX: 0,					// 線の初期位置に調整する場合
+lineInitY: 0,					// 線の初期位置に調整する場合
+lineInitWidth: 0,				// 線の初期位置に調整する場合
+lineInitHeight: 0,				// 線の初期位置に調整する場合
+linePositionGapMin: 1,			// 線の配置ずれの最小値
+linePositionGapMax: 4,			// 線の配置ずれの最大値
+lineGapMin: 3,					// 線の長さのずれの最小値
+lineGapMax: 10,					// 線の長さのずれの最大値
+lineAlphaGapMin: 0.2,			// 線の透明度のずれの最小値(0〜1.0)
+lineAlphaGapMax: 1.0,			// 線の透明度のずれの最小値(0〜1.0)
+lineHoverTimeMin: 500,			// ホバー時の最小時間
+lineHoverTimeMax: 600,			// ホバー時の最大時間
+lineHoverWidthRandMin: 1.05,	// ホバー時のスケールサイズ
+lineHoverWidthRandMax: 1.15,	// ホバー時のスケールサイズ
+lineHoverHeightRandMin: 1.2,	// ホバー時のスケールサイズ
+lineHoverHeightRandMax: 1.6,	// ホバー時のスケールサイズ
+lineLastTimeMin: 500,			// 線が消えるときの最小時間
+lineLastTimeMax: 1500,			// 線が消えるときの最大時間
+// 二重線の設定
+isLineDouble: true,				// 二重線を引くかどうか
+lineDoubleBaseWidth: 0.95,		// 二重線の長さの基準値(1で100%)
+lineDoubleBaseHeight: 0.80,		// 二重線の長さの基準値(1で100%)
+// 薄いボーダーの設定
+isLineAlpha: true,				// 薄い線を引くかどうか
+lineAlphaBaseWidth: 1.05,		// 下に引く薄い線の長さの基準値(1で100%)
+lineAlphaBaseHeight: 1.20,		// 下に引く薄い線の長さの基準値(1で100%)
+// アニメーションの設定
+startDelay: 500,				// アニメーション開始までのディレイ
+hideWait: 800,					// フレームを消すまでの待機時間
+// コールバック
+endBeforeAnimation: function () {	// アニメーション後、消える直前のコールバック
+	// ここに処理を書きます
+},
+endAnimation: function () {			// アニメーション後、消えた直後のコールバック
+	// ここに処理を書きます
+},
+</code></pre>
+
+		</section>
+		<!-- end.content -->
+
+	</div>
+	<!-- end#main -->
+
+
+	<footer id="footer">
+		<p><small>Copyright © <a href="http://begoingto.jp/">begoingto</a> All Rights Reserved.</small></p>
+	</footer>
+</div>
+
+
+</body>
+</html>

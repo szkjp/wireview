@@ -1,0 +1,26 @@
+body {
+	/* ページが一瞬表示されてしまう場合、コメントアウトを解除すると解消されます */
+	/* ただし、プラグインを使っていないページでも同じ記述をしてしまうと、ページが真っ白のままになるので注意 */
+	/*
+	visibility: hidden;
+	*/
+}
+
+.wireview-canvas {
+	position: absolute;
+	z-index: 0;
+}
+
+.wireview-canvas.hide {
+	display: none;
+}
+
+#wireview-layer {
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0px;
+	top: 0;
+	background-color: #fff;
+}

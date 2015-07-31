@@ -1,0 +1,118 @@
+// ============================
+// 共通パーツ読み込み
+// ============================
+@import "_core";
+
+
+// ============================
+// component
+// ============================
+.c-content {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.6);
+	border: 0px solid #0000cc;
+	@include border-radius(4px);
+}
+
+.c-contentSub {
+	margin: 0 0 50px 0;
+}
+
+.c-title {
+	margin: 10px 0 25px 0;
+	font-size: $fs-xlarge;
+	font-weight: bold;
+}
+.c-titleSub {
+	margin: 0 0 10px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	@include box-shadow(0 1px 0 #fff);
+	font-size: $fs-large;
+	font-weight: bold;
+}
+.c-titleSubSub {
+	margin: 0 0 10px 2px;
+	padding: 0 0 0 10px;
+	border-left: 5px solid $base-color;
+	font-size: $fs-medium;
+	font-weight: bold;
+}
+
+.c-log {
+	border: 1px dashed #ccc;
+	@include border-radius(4px);
+	padding: 10px 20px 20px 20px;
+	margin: 0 0 30px 0;
+	dt {
+			border-left: 5px solid $base-color;
+			padding: 0 0 0 10px;
+			margin: 1em 0 0 0;
+	}
+	dd {
+			margin: 0 0 0 1em;
+	}
+}
+
+.c-link {
+	color: $fc-link;
+	cursor: pointer;
+	&:hover {
+		color: $fc-hover;
+		text-decoration: underline;
+	}
+}
+
+.c-list__noDisc {
+	list-style: none;
+	margin: 0;
+}
+
+
+// ============================
+// project
+// ============================
+.p-mainTitle {
+	margin: 0 0 20px 0;
+	font-size: $fs-xxxlarge;
+	font-weight: bold;
+}
+
+.simple-table {
+	width: 100%;
+	margin: 0 0 20px 0;
+	background: #fff;
+	caption {
+		font-size: $fs-medium;
+	}
+	tr {
+		th {
+			width: 20%;
+			padding: 10px;
+			font-weight: bold;
+			border: 1px solid $border-color;
+			font-size: $fs-medium;
+		}
+		td {
+			padding: 10px;
+			font-weight: normal;
+			border: 1px solid $border-color;
+			font-size: $fs-medium;
+		}
+	}
+}
+
+
+
+// ============================
+// state
+// ============================
+
+
+
+
+// ============================
+// utility
+// ============================
+.mt40 { margin-top: 40px!important; }

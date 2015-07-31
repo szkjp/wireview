@@ -1,0 +1,122 @@
+// ============================
+// 共通パーツ読み込み
+// ============================
+@import "_core";
+
+
+// ============================
+// wrapper
+// ============================
+#wrapper {
+	width: 96%;
+	max-width: $content-width;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+
+// ============================
+// header
+// ============================
+$header-bg: #333;
+.l-header {
+	//position: fixed;
+	width: 100%;
+	min-width: 640px;
+	height: 60px;
+	top: 0;
+	z-index: 10;
+	@include opacity(0.95);
+	background-color: $header-bg;
+	@include box-shadow(0px 0px 12px $header-bg - #111 inset);
+	@extend %extend-cf;
+	.l-header__inner {
+		margin: 0 auto;
+		width: 96%;
+		max-width: $content-width;
+	}
+	.l-header__title {
+		float: left;
+		display: inline-block;
+		margin: 15px 0 0 0;
+		font-size: $fs-large;
+		font-weight: bold;
+		@include transition(all, 0.3s);
+		&:hover {
+			//@include scale(1.05);
+		}
+		a {
+			color: $fc-reverse;
+			&:hover, &:focus {
+				color: $fc-reverse;
+				text-decoration: none;
+			}
+		}
+	}
+	.l-header__btn {
+		float: right;
+		display: inline-block;
+		a {
+			display: block;
+			margin: 11px 0 0 10px;
+			padding: 6px 12px;
+			color: $fc-reverse;
+			font-size: $fs-medium;
+			border: 0px solid #0000cc;
+			background-color: $theme-color;
+			@include border-radius(4px);
+		}
+	}
+	.l-header__nav {
+		float: right;
+		display: inline-block;
+		margin: 0 20px 0 0;
+		ul {
+			@extend %extend-cf;
+			li {
+				float: left;
+				display: inline-block;
+				margin: 11px 0 0 10px;
+				a {
+					display: block;
+					padding: 6px 12px;
+					font-size: $fs-medium;
+					color: $fc-reverse;
+					border: 0px solid #0000cc;
+					@include border-radius(4px);
+					@include transition(all, 0.3s);
+					&.is-active,
+					&:hover {
+						text-decoration: none;
+						background-color: $header-bg - #222222; // 色の計算も可
+					}
+				}
+			}
+		}
+	}
+	.l-header__sns {
+		float: right;
+		display: inline;
+		margin: 15px 13px 0 0;
+		list-style: none;
+		li {
+		}
+	}
+}
+
+
+
+// ============================
+// main
+// ============================
+#main {
+	margin: 0 0 50px 0;
+}
+
+
+// ============================
+// footer
+// ============================
+#footer {
+	text-align: right;
+}
